@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html{font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://www.mobygames.com/images/promo/original/d4ac9179e0e04ba39e4f9d5696ca620e.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 100%;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.button1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body >
+<h1 style="text-align:center"> Welcome to Airline Booking services</h1>
+<br>
+<br>
+<h2 style="text-align:center">Login Form</h2>
+
+<form class="center" action="/controllers/authenticate-controller" method="post">
+  
+  <div class="container">
+    <label for="uname"><b>email</b></label>
+    <input type="text" placeholder="Enter email" name="email" required>
+
+    <label for="psw"><b>password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit" class='button1'>Login</button>
+  </div>
+
+  <div>
+    <h4 style="text-align:center"> Don't have account <a class="cancelbtn" href="/signup">sign up</a> here</h4> 
+  </div>
+</form>
+
+</body>
+</html>

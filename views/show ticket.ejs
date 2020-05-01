@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<script>
+    var na= "<%= name %>"
+    var en="<%= email %>"
+    var fd="<%= flightid %>"
+    var sr="<%= source %>"
+    var dt="<%= destination %>"
+    var dat="<%= date %>"
+    var tm="<%= time %>"
+    var fr="<%= fare %>"
+
+
+</script>
+<form action="/search",method='POST'>
+  <div class="container">
+    <h1>Ticket Booked succesfully</h1>
+    <hr>
+
+    <label for="email"><b>name</b></label>
+    <input type="text" id="nm" name="email" value="<%= name %>">
+    <label for="email"><b>Email</b></label>
+    <input type="text" name="email" value="<%= email %>">
+    <label for="email"><b>flight id</b></label>
+    <input type="text" value="<%= flightid %>">
+    <label for="email"><b>Source</b></label>
+    <input type="text" value="<%= source %>">
+    <label for="email"><b>Destination</b></label>
+    <input type="text" value="<%= destination %>">
+    <label for="email"><b>date</b></label>
+    <input type="text" value="<%= date %>">
+    <label for="psw"><b>time</b></label>
+    <input type="text" value="<%= time %>">
+
+    <label for="psw-repeat"><b>price</b></label>
+    <input type="text" value="<%= fare %>">
+    <hr>
+    <button type="submit" >Back to home page</button>
+  </div>
+</form>
+
+</body>
+</html>
