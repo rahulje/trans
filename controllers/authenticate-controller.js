@@ -12,7 +12,7 @@ module.exports.authenticate=function(req,res){
     var password=req.body.password;
    
    
-    connection.query('SELECT * FROM users WHERE email = ?',[email], function (error, results, fields) {
+    connection.query('SELECT * FROM heroku_93535a107431c7d.users WHERE email = ?',[email], function (error, results, fields) {
       if (error) {
           res.json({
             status:false,
