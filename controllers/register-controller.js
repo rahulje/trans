@@ -14,7 +14,7 @@ module.exports.register=function(req,res){
     }
 
 
-    connection.query('INSERT INTO users SET ?',users, function (error, results, fields) {
+    connection.query('INSERT INTO heroku_93535a107431c7d.users SET ?',users, function (error, results, fields) {
       if (error) {
         res.json({
             status:false,
