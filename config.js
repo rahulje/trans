@@ -12,4 +12,3 @@ var connection = mysql.createPool({
 
 module.exports = connection;
 
-module.exports = connection;
