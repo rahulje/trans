@@ -1,18 +1,15 @@
-var mysql= require('mysql');
-var connection = mysql.createConnection({
-    server: "us-cdbr-east-06.cleardb.net",
-    user: "b1c37c44ae5b35",
-    password: "635aa172",
-    database:"heroku_93535a107431c7d"
-    
-    
+
+
+const mysql = require("mysql");
+const dbConfig = require("../config/db.config.js");
+
+var connection = mysql.createPool({
+  host: dbConfig.HOST,
+  user: dbConfig.USER,
+  password: dbConfig.PASSWORD,
+  database: dbConfig.DB
 });
-connection.connect(function(err){
-if(!err) {
-    console.log("Database is connected");
-} else {
-    console.log("Error while connecting with database");
-}
-});
+
 module.exports = connection;
 
+module.exports = connection;
