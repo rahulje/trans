@@ -3,111 +3,78 @@
         <title>
             Airline Booking
         </title>
-        <style>
-            body{
-              background-image: url('https://image.freepik.com/free-vector/abstract-blue-white-wave-background_41814-377.jpg');
-              background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: 100% 100%;
-            }
-            .form-control{
-                width:300px;
-            }
-            .container {
-  padding: 16px;
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       <style>
+         body, html{font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(204, 245, 255);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height: 100%;
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password],input[type=number] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-select{
-    background-color: #ddd;
-    outline: none;
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-
-}
-input[type=text]:focus, input[type=password]:focus,input[type=number]:focus,input[type=email]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-em
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
+input,select{
+  width:190px;
+  padding: 5px;
   margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+  display:block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
-
-.registerbtn:hover {
-  opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-        </style>
+       </style>
     </head>
     
         <form action="/controllers/register-controller" method="POST">
             <div class="container">
-                <h1>Register</h1>
+              <div style="padding-left: 320px;padding-top:100px ;">
+                <div class="card" style="width: 500px;background-color:white;text-align: center;border-radius: 20px;">
+                  <div style="padding-top: 10px;"></div>
+                <div style="background-color: rgb(128, 229, 255);"><h1>Register</h1></div>
                 <p>Please fill in this form to create an account.</p>
                 <hr>
-            
+            <div style="text-align: center;padding-left: 60px;">
+              <div class="row">
+                <div class="col-xs-6" >
                 <label for="fullname"><b>Full Name</b></label>
                 <input type="text" placeholder="Enter Full Name" name="name" required>
-
-                <label for="userid" ><b>mail</b></label>
-                <input type="text" placeholder="Enter mail" name="email"  required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" minlength="4" maxlength="8" required>
-            
+              </div>
+              <div class="col-xs-6" style="padding-left: 30px;" >
                 <label for="age"><b>Age</b></label>
                 <input type="number" placeholder="Enter Age" name="age" min="1" max="150" required>
-            
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                <label for="userid" ><b>mail</b></label>
+                <input type="text" placeholder="Enter mail" name="email"  required>
+                </div>
+                <div class="col-xs-6" style="padding-left: 30px;">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" minlength="4" maxlength="8" required>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
                 <label for="mobile"><b>Mobile</b></label>
                 <input type="number" placeholder="Enter Mobile Number" name="mobile" min="000000000" max="9999999999" required>
-
+              </div>
+              <div class="col-xs-6" style="padding-left: 30px;">
                 <label for="gender"><b>Gender</b></label>
                 <select id="gender" name="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                
+              </div>
+              </div>
+              </div>
                 
                 <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+              </div>
               </div>
             
               

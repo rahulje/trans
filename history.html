@@ -82,8 +82,10 @@ button:hover {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-  <body>
+  <body style="background-color: rgb(204, 245, 255);">
+    <div style="background-color: rgb(0, 184, 230);">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/search" style="color: black; font-size: 20px;">Back</a>
@@ -93,19 +95,21 @@ button:hover {
         </ul>
       </div>
     </nav>
+  </div>
 <form action="/controllers/history" method="POST" style="border:1px solid #ccc">
-  <div class="container">
+  <div class="container" style="text-align: center;">
     <h1>Search for Transcation history</h1>
-    <p>Please  giving information below.</p>
+    <p>Please  give information below.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter email" name="email1" required>
+    <input type="text" placeholder="Enter email" name="email1"  style="width:400px;"   required>
    
-
+<div style="padding-left: 500px;">
     <div class="clearfix">
-      <button type="submit" class="signupbtn">submit</button>
+      <button type="submit" class="signupbtn" style="width:200px;">submit</button>
     </div>
+  </div>
   </div>
 </form>
 

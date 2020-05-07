@@ -13,7 +13,7 @@ module.exports.Book=function(req,res){
     var Seat=req.body.seats;
     console.log(parseInt(flightid))
    
-    connection.query('SELECT * FROM flights WHERE fid = ?',[flightid], function (error, results, fields) {
+    connection.query('SELECT * FROM heroku_93535a107431c7d.flights WHERE fid = ?',[flightid], function (error, results, fields) {
       if (error) {
           res.json({
             status:false,
@@ -30,7 +30,7 @@ module.exports.Book=function(req,res){
             }
             else{
                 var s=results[0].seats-Seat;
-                connection.query('update flights set seats=? where fid=?', [s,parseInt(results[0].fid)], (error, results1, fields) => {
+                connection.query('update heroku_93535a107431c7d.flights set seats=? where fid=?', [s,parseInt(results[0].fid)], (error, results1, fields) => {
                     if (error) {
                         res.json({
                           status:false,
@@ -39,7 +39,7 @@ module.exports.Book=function(req,res){
                     }
                     else{
                     console.log('Rows affected:', results1.affectedRows);
-                    connection.query('select * from users where email=?', [email], (error, results2, fields) => {
+                    connection.query('select * from heroku_93535a107431c7d.users where email=?', [email], (error, results2, fields) => {
                         if (error) {
                             res.json({
                               status:false,

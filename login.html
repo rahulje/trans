@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body, html{font-family: Arial, Helvetica, sans-serif;
-    background-image: url('https://www.mobygames.com/images/promo/original/d4ac9179e0e04ba39e4f9d5696ca620e.jpg');
+    background-color:rgb(204, 245, 255);
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -74,11 +74,16 @@ span.psw {
 </style>
 </head>
 <body >
-<h1 style="text-align:center"> Welcome to Airline Booking services</h1>
+  <div style="background-color: rgb(102, 224, 255);padding-top: 5px;padding-bottom: 5px;">
+<h1 style="text-align:center"> Welcome to Bus Booking services</h1></div>
 <br>
 <br>
+<div style="padding-left: 420px;">
+<div class="card" style="width: 500px;background-color:white;text-align: center;border-radius: 20px;">
+  <div style="padding-top: 10px;"></div>
+  <div style="background-color: rgb(102, 224, 255);">
 <h2 style="text-align:center">Login Form</h2>
-
+</div>
 <form class="center" action="/controllers/authenticate-controller" method="post">
   
   <div class="container">
@@ -92,9 +97,11 @@ span.psw {
   </div>
 
   <div>
-    <h4 style="text-align:center"> Don't have account <a class="cancelbtn" href="/signup">sign up</a> here</h4> 
+    <h4 style="text-align:center"> Don't have account </h4> 
+    <a class="cancelbtn" href="/signup">sign up</a> 
   </div>
 </form>
-
+</div>
+</div>
 </body>
 </html>

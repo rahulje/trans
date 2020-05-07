@@ -14,7 +14,7 @@ module.exports.search1=function(req,res){
     //var time=req.body.time;
    
    
-    connection.query('SELECT * FROM flights WHERE source= ? AND destination=? AND date =?',[source,dest,date1], function (error, results, fields) {
+    connection.query('SELECT * FROM heroku_93535a107431c7d.flights WHERE source= ? AND destination=? AND date =?',[source,dest,date1], function (error, results, fields) {
       if (error) {
           res.json({
             status:false,

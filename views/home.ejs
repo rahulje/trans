@@ -1,122 +1,178 @@
 <!DOCTYPE html>
 <html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
+  <head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-input[type=date]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-input[type=text]:focus, input[type=password]:focus,input[type=date]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+    /* Full-width input fields */
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background:white;
+    }
+    input[type="date"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: white;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus {
+      background-color:white;
+      outline: none;
+    }
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
 
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+    /* Set a style for all buttons */
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
 
-button:hover {
-  opacity:1;
-}
+    button:hover {
+      opacity: 1;
+    }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      padding: 14px 20px;
+      background-color: #f44336;
+    }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn,
+    .signupbtn {
+      float: left;
+      width: 50%;
+    }
 
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .bg {
+    /* The image used */
+  background-color: rgb(204, 243, 255);    /* Full height */
+    max-height:100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-}
-</style>
-<body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/" style="color: black; font-size: 20px;">Home</a>
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+      .cancelbtn,
+      .signupbtn {
+        width: 100%;
+      }
+    }
+  </style>
+       <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lux/bootstrap.min.css"/>
+
+    
+    </head>
+    <body>
+      <div class="bg">
+      <div style="background-color: rgb(128, 225, 255)">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid"  >
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/"style="color: black; font-size: 20px;">Home</a>
+            
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/history"style="color: black; font-size: 20px;"
+                >Check Transaction history</a
+              >
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/"style="color: black; font-size: 20px;"
+                ><span class="glyphicon glyphicon-log-in"></span> Logout</a
+              >
+            </li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="/history" style="color: black; font-size: 20px;">check Transaction history</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/" style="color: black; font-size: 20px;"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-        </ul>
-      </div>
-    </nav>
-<form action="/controllers/search" method="POST" style="border:1px solid #ccc">
-  <div class="container">
-    <h1>Flight booking</h1>
-    <p>Please search the flight by giving information below.</p>
-    <hr>
-
-    <label for="email"><b>Source</b></label>
-    <input type="text" placeholder="Enter source name" name="sourcename" required>
-
-    <label for="psw"><b>Destination</b></label>
-    <input type="text" placeholder="Enter Destination" name="Destname" required>
-
-    <label for="psw-repeat"><b>enter date</b></label>
-    <input type="date" placeholder="Enter date" name="date3" required>
-   
-
-    <div class="clearfix">
-      <button type="submit" class="signupbtn">Search flight</button>
+      </nav>
     </div>
-  </div>
-</form>
+      <form
+        action="/controllers/search"
+        method="POST"
+        style="border: 1px solid #ccc;"
+      >
+      <div >
+        <div class="container" style="text-align: center;" >
+          <h1>Bus booking</h1>
+          <p>Please search the bus by giving information below.</p>
+          <hr />
 
-</body>
+          <label for="email"><b>Source</b></label>
+          <input
+            type="text"
+            placeholder="Enter source name"
+            name="sourcename"
+            style="width: 300px;"
+            required
+          />
+
+          <label for="psw"><b>Destination</b></label>
+          <input
+            type="text"
+            placeholder="Enter Destination"
+            name="Destname"
+            style="width: 300px;"
+            required
+          />
+
+          <label for="psw-repeat"><b>Date</b></label>
+          <input
+            type="date"
+            placeholder="Enter date"
+            name="date3"
+            style="width: 300px;"
+            required
+          />
+
+          <div  style="padding-left: 500px;">
+            <button type="submit" class="signupbtn" style="width: 200px;">
+              Search Bus
+            </button>
+          </div>
+          <div style="padding-top: 300px;"></div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </body>
 </html>

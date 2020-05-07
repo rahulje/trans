@@ -12,7 +12,7 @@ module.exports.History=function(req,res){
     //var time=req.body.time;
     console.log(email)
    
-    connection.query('SELECT * FROM history WHERE username=?',[email], function (error, results, fields) {
+    connection.query('SELECT * FROM heroku_93535a107431c7d.history WHERE username=?',[email], function (error, results, fields) {
       if (error) {
           res.json({
             status:false,
